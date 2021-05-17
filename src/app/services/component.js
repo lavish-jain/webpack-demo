@@ -1,4 +1,4 @@
-class Component {
+export class Component {
   constructor() {
     this.numberOneInput = document.getElementById("numberOne");
     this.numberTwoInput = document.getElementById("numberTwo");

@@ -1,7 +1,7 @@
-const alertService = new Alert();
-const componentService = new Component();
+import { inputsAreValid } from "./utils/inputsAreValid";
+import { parseInputs } from "./utils/parseInputs";
 
-const run = (alertService, componentService) => {
+export const run = (alertService, componentService) => {
   alertService.hideErrors();
   componentService.onClick(() => {
     const inputs = componentService.getInputs();
@@ -15,5 +15,3 @@ const run = (alertService, componentService) => {
     }
   });
 };
-
-run(alertService, componentService);
