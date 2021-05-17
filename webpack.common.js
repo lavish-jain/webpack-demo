@@ -7,6 +7,20 @@ module.exports = {
         test: /\.scss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(svg|png|jpg|gif)/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "imgs",
+          },
+        },
+      },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
     ],
   },
   plugins: [
